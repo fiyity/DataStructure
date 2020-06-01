@@ -47,11 +47,10 @@
                     <label>密码</label>
                     <input type="password" class="form-control" name="password" id="password"/>
                 </div>
-
-                <button type="button" class="btn btn-default" value="学生登录" onClick= "javascript:go('./StudentServlet?method=Login') ">学生登录</button>
-                <button type="button" class="btn btn-default" value="教师登录" onClick= "javascript:go('./TeacherServlet?method=Login') ">教师登录</button>
-                <button type="button" class="btn btn-default" value="管理员登录" onClick= "javascript:go('./AdminServlet?method=Login') ">管理员登录</button>
-
+                <button type="button" class="btn btn-default" value="学生登录" onClick= "javascript:go('./StudentServlet?method=SLogin') ">学生登录</button>
+                <button type="button" class="btn btn-default" value="教师登录" onClick= "javascript:go('./TeacherServlet?method=TLogin') ">教师登录</button>
+                <button type="button" class="btn btn-default" value="管理员登录" onClick= "javascript:go('./AdminServlet?method=ALogin') ">管理员登录</button>
+                <button type="button" value="注册" onClick="javascript:go('./Register.jsp')">注册</button>
                 <button type="reset" class="btn btn-default">重置</button>
             </form>
         </div>

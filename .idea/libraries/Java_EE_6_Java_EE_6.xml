@@ -12,6 +12,12 @@
       <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://D:/jdk1.8.0_152/lib" />
+    </SOURCES>
+    <excluded>
+      <root url="jar://D:/jdk1.8.0_152/lib/mysql-connector-java-5.1.49.jar!/" />
+    </excluded>
+    <jarDirectory url="file://D:/jdk1.8.0_152/lib" recursive="false" type="SOURCES" />
   </library>
 </component>

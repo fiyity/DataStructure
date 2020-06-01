@@ -1,17 +1,23 @@
 package com.firstgroup.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.HashMap;
 
 public class StudentDAO {
-    public boolean Login(Object objs) {
-        HashMap hashMap = (HashMap) objs;
+    public boolean Login(Object obj) throws Exception {
+        HashMap hashMap = (HashMap) obj;
         String account = (String) hashMap.get("account");
         String password = (String) hashMap.get("password");
-        System.out.println("DAO:"+account+":"+password);
-        if(account!=null&&password!=null){
-            if(account.equals("12345")&&password.equals("12345")){
-                return true;
-            }
+        String sql = "select account,password from student where account=? and password=?";
+        Connection connection = new DataBaseDAO().getConnection();
+        PreparedStatement pstmt = connection.prepareStatement(sql);
+        pstmt.setString(1,account);
+        pstmt.setString(2,password);
+        ResultSet resultSet = pstmt.executeQuery();
+        if(resultSet!=null){
+            return true;
         }
         return false;
     }
