@@ -1,11 +1,14 @@
 package com.firstgroup.dao;
 
+import com.firstgroup.bean.Classes;
+import com.firstgroup.bean.Teacher;
 import com.firstgroup.interfaces.CourseManagerInterface;
 import com.firstgroup.interfaces.Login_RegisterInterface;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class AdminDAO implements CourseManagerInterface, Login_RegisterInterface {
@@ -30,6 +33,7 @@ public class AdminDAO implements CourseManagerInterface, Login_RegisterInterface
     }
 
     public boolean AddCourse(Object obj) {
+        String sql = "insert into classes values(?,?,?,?)";
         return false;
     }
 
@@ -42,6 +46,20 @@ public class AdminDAO implements CourseManagerInterface, Login_RegisterInterface
     }
 
     public Object InquireCourse(Object obj) {
+        return null;
+    }
+
+    public Object InquireTeacher(Object obj) throws Exception {
+        String sql = "select* from teacher";
+        Connection con = new DataBaseDAO().getConnection();
+        PreparedStatement pstmt = con.prepareStatement(sql);
+        ResultSet res = pstmt.executeQuery();
+        ArrayList list = new ArrayList();
+        while (res.next()){
+            Teacher teacher = new Teacher();
+
+        }
+
         return null;
     }
 }

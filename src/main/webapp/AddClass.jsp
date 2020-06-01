@@ -11,9 +11,14 @@
     <title>增设班级</title>
 </head>
 <body>
-    班级名称：<input name="className" type="text"/><br/>
-    班级开课日期：<input name="begain" type="text"/><br/>
-    班级结课日期：<input name="end" type="text"/><br/>
-    教师安排：<input name="teacher" type="text"/><br/>
+    <form action="./AdminServlet?method=AddCourse" method="post">
+        班级名称：<input name="className" type="text"/><br/>
+        班级开课日期：<input name="begain" type="text"/><br/>
+        班级结课日期：<input name="end" type="text"/><br/>
+        教师安排：<input name="teacher" type="text"/><br/>
+        <input type="submit" value="确认"/>
+    </form>
+
+
 </body>
 </html>

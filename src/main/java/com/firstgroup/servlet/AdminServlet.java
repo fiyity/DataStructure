@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 @WebServlet(name = "AdminServlet",urlPatterns = "/AdminServlet")
 public class AdminServlet  extends BaseServlet {
@@ -25,4 +26,12 @@ public class AdminServlet  extends BaseServlet {
         }
         return "./Login.jsp";
     }
+    public String AAddCourse(HttpServletRequest request,HttpServletResponse response){
+        String className = request.getParameter("className");
+        String begainDate = request.getParameter("begin");
+        String endDate = request.getParameter("end");
+        String teacher = request.getParameter("teacher");
+        return "./AssessCourse.jsp";
+    }
+    public void InquireTeacher(){}
 }
