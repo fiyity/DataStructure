@@ -9,6 +9,7 @@ public class Student {
     private String name;
     private String email;
     private int classNumber;
+    private String className;
 
     public String getSid() {
         return sid;
@@ -56,5 +57,13 @@ public class Student {
 
     public void setClassNumber(Object classNumber) {
         this.classNumber = (Integer) classNumber;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(Object className) {
+        this.className = (String) className;
     }
 }

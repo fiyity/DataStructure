@@ -12,6 +12,6 @@
 </head>
 <body>
     <button ><a href="./AssessCourse.jsp">班级管理</a></button>
-    <button ><a href="./AssessTeacher.jsp">教师管理</a></button>
+    <button ><a href="./AdminServlet?method=AInquireApplication">教师管理</a></button>
 </body>
 </html>

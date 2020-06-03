@@ -31,13 +31,13 @@ public class BaseServlet extends HttpServlet {
         //获取到当前字节码对象(ServletDemo02.class在内存中对象)
         Class<? extends BaseServlet> clazz = this.getClass();
 
-        System.out.println("Class:"+clazz.toString());
+        //System.out.println("Class:"+clazz.toString());
 
         try {
             //获取clazz上名称为md方法
             Method method=clazz.getMethod(methodname, HttpServletRequest.class,HttpServletResponse.class);
 
-            System.out.println("method:"+method);
+            //System.out.println("method:"+method);
 
             if(null!=method){
                 //调用找到的方法

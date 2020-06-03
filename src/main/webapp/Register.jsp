@@ -28,9 +28,9 @@
 <form id="s" action="./StudentServlet?method=SRegister" method="post">
     <div style="display: none" id="students">
         姓    名：<input name="name" type="text"/><br/>
-        学生学号：<input name="tid" type="text"/><br/>
+        学生学号：<input name="sid" type="text"/><br/>
         密    码：<input class="studentpwd" id="p3" name="password" type="password"/><br/>
-        电子邮箱：<input name="phone" type="text"/><br/>
+        电子邮箱：<input name="email" type="text"/><br/>
         <input type="submit" value="确认" />
     </div>
 </form>

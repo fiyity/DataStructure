@@ -32,7 +32,7 @@ public class Teacher {
         this.name = (String) name;
     }
 
-    public boolean isTeacherQualification() {
+    public boolean getTeacherQualification() {
         return teacherQualification;
     }
 
